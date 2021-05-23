@@ -34,7 +34,12 @@ I have used Chrome to automate scenarios and this framework currently supports o
 
 
 #### Result Files:	
-The Test Execution Results will be stored in the  folder directory  **./target/cucumber/** once the test has completed
+The Test Execution Results will be stored in the  folder directory  **./target/cucumber/** once the test has completed.
+
+We have attached the execution report in .zip format at below location in .git
+https://github.com/MayurThapan/CodilityAssessment/blob/main/cucumber.zip
+
+Reports will also capture the screenshot if test fails. 
 
 #### Further Improvements:
 
