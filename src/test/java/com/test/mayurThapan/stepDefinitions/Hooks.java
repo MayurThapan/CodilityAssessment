@@ -29,10 +29,15 @@ public class Hooks {
 	                    .getScreenshotAs(OutputType.BYTES);
 	            scenario.embed(screenshot, "image/png");
 	        }
+	        closeBrowser();
 	    }
 	
 	public void printScenarioName(Scenario scenario) {
 		scenario.getName();
+	}
+	
+	public void closeBrowser() {
+		base.getDriver().close();
 	}
 
 }

@@ -13,6 +13,7 @@ import static com.test.mayurThapan.utills.ConfigPropertyReader.getProperty;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 public class BaseActions {
 
@@ -32,7 +33,19 @@ public class BaseActions {
 		return driver.findElements(locator);
 	}
 	
-	
+	public String getRandomName(){
+		
+		int leftLimit = 97; 
+	    int rightLimit = 122; 
+	    int targetStringLength = 5;
+	    Random random = new Random();
+
+	    return random.ints(leftLimit, rightLimit + 1)
+	      .limit(targetStringLength)
+	      .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
+	      .toString();
+
+	}
 	
 	public void waitForPageToLoadCompletely() {
 		ExpectedCondition<Boolean> expectation = new
